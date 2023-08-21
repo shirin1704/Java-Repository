@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+public class ClosestPrimeNumber
+{
+    public static boolean checkPrime(int num)
+    {
+        int count=0;
+        for(int i=1; i<=num; i++)
+        {
+            if(num%i==0)
+            count++;
+        }
+        if (count==2)
+        return(true);
+        else
+        return(false);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num=sc.nextInt();
+        if(checkPrime(num))
+        System.out.println(num+" is a prime number in itself.");
+        else
+        {
+            for(int i=1; i<=num; i++)
+            {
+                int before=num-i;
+                int after=num+i;
+                if(checkPrime(before) && checkPrime(after))
+                {
+                    System.out.println(before+" and "+after+" are the closest prime numbers and are equidistant from "+num+".");
+                    break;
+                }
+                else if(checkPrime(before))
+                {
+                    System.out.println(before+" is the closest prime number to "+num+".");
+                    break;
+                }
+                else if(checkPrime(after))
+                {
+                    System.out.println(after+" is the closest prime number to "+num+".");
+                    break;
+                }
+                else
+                continue;
+            }
+        }
+    }
+}
