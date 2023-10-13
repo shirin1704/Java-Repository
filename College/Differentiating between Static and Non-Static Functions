@@ -1,0 +1,31 @@
+//program to differentiate between static and non-static member functions
+import java.util.*;
+public class Functions
+{
+    public static void add(int n1, int n2)
+    {
+        int sum=n1+n2;
+        System.out.println("This is the static function");
+        System.out.println("Sum of the numbers is "+sum+".");
+    }
+    void subtract(int n1, int n2)
+    {
+        int sub;
+        if(n1>n2)
+        sub=n1-n2;
+        else
+        sub=n2-n1;
+        System.out.println("This is the non-static function");
+        System.out.println("Difference of the numbers is "+sub+".");
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Functions obj=new Functions();
+        System.out.println("Enter two numbers:");
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        add(n1, n2);
+        obj.subtract(n1, n2);
+    }
+}
