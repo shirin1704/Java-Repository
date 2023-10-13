@@ -1,0 +1,18 @@
+import java.util.*;
+class Square
+{
+    double sq(double n)
+    {
+        double s=n*n;
+        return s;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Square obj=new Square();
+        System.out.println("Enter a number:");
+        double n=sc.nextDouble();
+        double s=obj.sq(n);
+        System.out.println("The square of the number is "+s);
+    }
+}
