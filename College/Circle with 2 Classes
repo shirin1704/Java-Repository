@@ -1,0 +1,26 @@
+import java.util.*;
+class Circle
+{
+    void area(double r)
+    {
+        double ar=3.14*r*r;
+        System.out.println("The area of the circle is "+ar+" sq. units");
+    }
+    void perimeter(double r)
+    {
+        double per=2*3.14*r;
+        System.out.println("The perimeter of the circle is "+per+" units");
+    }
+}
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Circle obj=new Circle();
+        System.out.println("Enter radius of the circle:");
+        double r=sc.nextDouble();
+        obj.area(r);
+        obj.perimeter(r);
+    }
+}
