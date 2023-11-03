@@ -1,0 +1,16 @@
+class Array
+{
+    public int a;
+    public static void main(String args[])
+    {
+        Array obj[]=new Array[5];
+        for(int i=0; i<5; i++)
+        {
+            obj[i]=new Array();
+            obj[i].a=i+1;
+        }
+        //obj[i]=new Array(i+1);
+        for(int i=0; i<5; i++)
+        System.out.println(obj[i].a);
+    }
+}
