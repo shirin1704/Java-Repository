@@ -1,0 +1,25 @@
+class Constructor
+{
+    int a, b;
+    Constructor(int a, int b)
+    {
+        System.out.println("Parameterized Constructor:");
+        this.a=a;
+        this.b=b;
+    }
+    Constructor()
+    {
+        System.out.println("Non-parameterized Constructor:");
+        a=10;
+        b=20;
+    }
+    public static void main(String args[])
+    {
+        Constructor obj1=new Constructor();
+        System.out.println(obj1.a);
+        System.out.println(obj1.b);
+        Constructor obj2=new Constructor(7, 17);
+        System.out.println(obj2.a);
+        System.out.println(obj2.b);
+    }
+}
