@@ -1,0 +1,24 @@
+class Copy
+{
+    int a;
+    int b;
+    Copy(int a, int b)
+    {
+        this.a=a;
+        this.b=b;
+    }
+    Copy(Copy c)
+    {
+        a=c.a;
+        b=c.b;
+    }
+    public static void main(String args[])
+    {
+        Copy obj1=new Copy(10, 20);
+        Copy obj2=new Copy(obj1);
+        System.out.println("Object: "+obj1.a);
+        System.out.println("Object: "+obj1.b);
+        System.out.println("Copy Object: "+obj2.a);
+        System.out.println("Copy Object: "+obj2.b);
+    }
+}
