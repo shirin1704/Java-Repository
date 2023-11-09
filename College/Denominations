@@ -1,0 +1,36 @@
+import java.util.*;
+class Denominations
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int n1=n;
+        int twot, fiveh, twoh, oneh, fifty, twenty, ten, five, two, one;
+        twot=n1/2000;
+        n1=n1%2000;
+        fiveh=n1/500;
+        n1=n1%500;
+        twoh=n1/200;
+        n1=n1%200;
+        oneh=n1/100;
+        n1=n1%100;
+        fifty=n1/50;
+        n1=n1%50;
+        twenty=n1/20;
+        n1=n1%20;
+        ten=n1/10;
+        n1=n1%10;
+        five=n1/5;
+        n1=n1%5;
+        two=n1/2;
+        n1=n1%2;
+        one=n1;
+        System.out.print("For Rs. "+n+", the cashier needs to return:\n");
+        System.out.print(twot+" notes of 2000\n"+fiveh+" notes of 500\n");
+        System.out.print(twoh+" notes of 200\n");
+        System.out.print(oneh+" notes of 100\n"+fifty+" notes of 50\n");
+        System.out.print(twenty+" notes of 20\n"+ten+" notes of 10\n");
+        System.out.println(five+" coins of 5\n"+two+" coins of 2\n"+one+" coins of 1");
+    }
+}
