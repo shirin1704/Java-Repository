@@ -1,0 +1,33 @@
+//program to implement Multi-level Inheritance
+import java.util.*;
+class Parent
+{
+    int x, y;
+    void show()
+    {
+        System.out.println("This is the Parent class.");
+    }
+}
+class Child extends Parent
+{
+    void display(int sum)
+    {
+        System.out.println("This is the Child class.");
+        System.out.println("The sum of the two numbers is "+sum+".");
+    }
+}
+class Grandchild extends Child
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Grandchild gc=new Grandchild();
+        System.out.println("This is the Grandchild class.");
+        System.out.println("Enter two numbers:");
+        gc.x=sc.nextInt();
+        gc.y=sc.nextInt();
+        int sum = gc.x + gc.y;
+        gc.display(sum);
+        gc.show();
+    }
+}
